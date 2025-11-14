@@ -3,7 +3,6 @@ import sys
 import streamlit as st
 import io
 from config import download_to_s3, upload_to_s3
-from dotenv import load_dotenv
 import pandas as pd
 import ast
 
@@ -133,7 +132,9 @@ if email in df["Email"].values:
                                 "Classification": classification
                                 }
 
-                                load_dotenv()       #scarica file direttamente da S3
+                                AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+                                AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")      #scarica file direttamente da S3
+                                
                                 content = download_to_s3()
                                 df = pd.read_csv(io.StringIO(content))
                                 
