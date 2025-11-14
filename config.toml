@@ -13,19 +13,19 @@
 # A TOML theme file must contain a [theme] table with theme options.
 # Any theme options defined in the app's config.toml file will override
 # those defined in the TOML theme file.
-base = #FFEBCD
+base = "#FFEBCD"
 
 # Primary accent color.
-primaryColor = #BC8F8F
+primaryColor = "#BC8F8F"
 
 # Background color of the app.
-backgroundColor = #DEB887
+backgroundColor = "#DEB887"
 
 # Background color used for most interactive widgets.
-secondaryBackgroundColor = #800000
+secondaryBackgroundColor = "#800000"
 
 # Color used for almost all text.
-textColor = #000000
+textColor = "#000000"
 
 # Red color used in the basic color palette.
 #
