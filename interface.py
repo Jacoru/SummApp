@@ -45,6 +45,21 @@ st.markdown("""
         color: white;
         background-color: #121212;
     }
+    /* Rimuove l'alone grigio (box-shadow) sui bottoni quando sono selezionati o in focus */
+    div.stButton > button:focus,
+    div.stButton > button:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Rimuove l'alone grigio anche dai dropdown e altri input */
+    .stSelectbox:focus,
+    .stTextInput:focus,
+    .stCheckbox:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
