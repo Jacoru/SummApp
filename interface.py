@@ -6,6 +6,48 @@ from config import download_to_s3, upload_to_s3
 import pandas as pd
 import ast
 
+
+st.markdown("""
+    <style>
+    /* Bottoni generici */
+    div.stButton > button {
+        background-color: #1DB954;
+        color: white;
+        border: 2px solid #1DB954;
+        border-radius: 6px;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    /* Hover effect */
+    div.stButton > button:hover {
+        background-color: #1ed760;
+        border-color: #1ed760;
+        color: black;
+    }
+
+    /* Bottoni spenti (non selezionati) simulati come disabilitati */
+    div.stButton > button:disabled {
+        background-color: #282828;
+        color: #888;
+        border: 2px solid #444;
+    }
+
+    /* Dropdown e checkbox */
+    .stSelectbox, .stCheckbox {
+        background-color: #282828 !important;
+        color: white !important;
+    }
+
+    /* Testo generale */
+    html, body, [class*="css"] {
+        color: white;
+        background-color: #121212;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Setup path per importare moduli locali
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
