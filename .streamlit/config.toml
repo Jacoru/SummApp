@@ -20,30 +20,11 @@ base = "dark"
 primaryColor = "#556b2f"
 
 
-backgroundColor = 	"#032e03ff"
+backgroundColor = 	"#2f4f4f"
 
 # Background color used for most interactive widgets.
-secondaryBackgroundColor = "#800000"
+secondaryBackgroundColor = "#20b2aa"
 
 # Color used for almost all text.
 textColor = "#000000"
 
-# Red color used in the basic color palette.
-#
-# By default, this is #ff4b4b for the light theme and #ff2b2b for the
-# dark theme.
-#
-# If `redColor` is provided, and `redBackgroundColor` isn't, then
-# `redBackgroundColor` will be derived from `redColor` using 10%
-# opacity for the light theme and 20% opacity for the dark theme.
-redColor = "#ff4b4b"
-
-# Orange color used in the basic color palette.
-#
-# By default, this is #ffa421 for the light theme and #ff8700 for the
-# dark theme.
-#
-# If `orangeColor` is provided, and `orangeBackgroundColor` isn't, then
-# `orangeBackgroundColor` will be derived from `orangeColor` using 10%
-# opacity for the light theme and 20% opacity for the dark theme.
-orangeColor = "#ffa421"
