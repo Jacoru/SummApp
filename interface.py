@@ -93,6 +93,18 @@ if email in df["Email"].values:
                 # Unisci tutto in una frase leggibile
                 output = " ".join(frasi)
 
+                result = "Your saved keyword(s) are: "
+
+                if len(saved_keywords) == 1:
+                        result += f" {saved_keywords[0]}.\n"
+                else:
+                        for words in saved_keywords:
+                                if words == saved_keywords[0]:
+                                        result += f" {words},\n"
+                                elif words == saved_keywords[-1]:
+                                        result += f" {words}.\n"
+                                else:
+                                        result += f" {words},\n"
                 st.divider()
 
                 st.write(f"Your saved search is: {output}")
