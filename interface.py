@@ -84,15 +84,6 @@ if email in df["Email"].values:
                 saved_classification = dati_utente["Classification"]
 
 
-                frasi = []
-                for i in range(len(saved_keywords)):
-                        frasi.append(saved_keywords[i])
-                        if i < len(saved_ops):
-                                frasi.append(saved_ops[i])
-
-                # Unisci tutto in una frase leggibile
-                output = " ".join(frasi)
-
                 result = "Your saved keyword(s) are: "
 
                 if len(saved_keywords) == 1:
@@ -107,7 +98,8 @@ if email in df["Email"].values:
                                         result += f" {words},\n"
                 st.divider()
 
-                st.write(f"Your saved search is: {output}")
+                st.write(f"Your saved search is: {result}")
+
                 if "num_fields" not in st.session_state:
                         st.session_state.num_fields = 1
                 terms=[]
