@@ -139,13 +139,16 @@ if email in df["Email"].values:
                 st.divider()
                 for sub in saved_subjects:
                         result = "Your saved subject(s) are: "
-                        for sub in saved_subjects:
-                                if sub == saved_subjects[0]:
-                                        result += f" {sub},\n"
-                                elif sub == saved_subjects[-1]:
-                                        result += f" {sub}.\n"
-                                else:
-                                        result += f" {sub},\n"
+                        if len(saved_subjects) == 1:
+                                result += f" {sub}.\n"
+                        else:
+                                for sub in saved_subjects:
+                                        if sub == saved_subjects[0]:
+                                                result += f" {sub},\n"
+                                        elif sub == saved_subjects[-1]:
+                                                result += f" {sub}.\n"
+                                        else:
+                                                result += f" {sub},\n"
                 st.write(result)
 
                 options = ["Computer Science (cs)", "Economics", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
