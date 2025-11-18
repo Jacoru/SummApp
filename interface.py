@@ -60,8 +60,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
 
+col_i, col_t = st.columns(2)
  # Interfaccia Streamlit
+col_i.space("Small")
 st.image("arkiv.png")
+col_t.space("stretch")
+
 st.title("📄 Paper Search and Text Summarization")
 
 with st.expander("📘 User Guide", expanded=True):
