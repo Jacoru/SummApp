@@ -60,13 +60,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
 
-col_i, col_t = st.columns(2)
  # Interfaccia Streamlit
-col_i.space("small")
-col_i.image("arkiv.png")
-
-col_t.space("small")
-col_t.title("📄 Paper Search and Summarization")
+st.image("arkiv.png")
+st.title("📄 Paper Search and Summarization")
 
 with st.expander("📘 User Guide", expanded=True):
     st.markdown("""
