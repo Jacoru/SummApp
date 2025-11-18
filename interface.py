@@ -62,7 +62,7 @@ df = pd.read_csv(io.StringIO(content))
 
  # Interfaccia Streamlit
 st.image("arkiv.png")
-st.title("📄 Paper Search and Summarization")
+st.title("Paper Search and Summarization")
 
 with st.expander("📘 User Guide", expanded=True):
     st.markdown("""
