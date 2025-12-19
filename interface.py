@@ -76,9 +76,9 @@ with st.expander("📘 User Guide", expanded=True):
     """)
 
 # Input utente
-nome = st.text_input("Insert your name *")
-cognome = st.text_input("Insert your surname *")
-email = st.text_input("Insert your email *")
+nome = st.text_input("Insert your name *", key="name")
+cognome = st.text_input("Insert your surname *", key="surname")
+email = st.text_input("Insert your email *", key="email")
 st.write("Fields with * are obligatory")
 st.divider()
 
@@ -331,6 +331,7 @@ else:
                         upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
 
                         st.success("File successfully updated on S3.")
+
 
 
 
