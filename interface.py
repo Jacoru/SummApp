@@ -288,9 +288,9 @@ else:
         with col_save:
         #bottone per salvataggio dati
            if st.button("🔍 Save"):
-                   if not nome or not cognome or not email:
+                     if not nome or not cognome or not email:
                            st.error("Plese, insert values in all fields with *.") #obbligo di compilazione
-                   else:
+                     else:
                            st.success(f"Wait for data's updating for: {email}")
                            new_row = {
                            "Email": email,
@@ -301,28 +301,29 @@ else:
                            "Subject": subject,
                            "Classification": classification
                            }
-   
+                     
                            AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
                            AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")       #scarica file direttamente da S3
                            content = download_to_s3()
                            df = pd.read_csv(io.StringIO(content))
                            
                            df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)    #Aggiungo la nuova riga
-   
+                     
                            upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
-   
+                     
                            st.success("File successfully updated on S3.")
-       with col_reset: 
-                 buttonr_clicked = st.button("Delete Email", key="buttonr")
-                 if buttonr_clicked:
-                    email = st.text_input(label="Insert your email *")
-                    if email != ""
-                       df = df[df['Email'] == email].reset_index(drop=True)
-                       st.write("Success")
+                     with col_reset: 
+                             buttonr_clicked = st.button("Delete Email", key="buttonr")
+                             if buttonr_clicked:
+                                email = st.text_input(label="Insert your email *")
+                                if email != "":
+                                   df = df[df['Email'] == email].reset_index(drop=True)
+                                   st.write("Success")
 
      
 
      
+
 
 
 
