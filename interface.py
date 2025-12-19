@@ -65,7 +65,7 @@ df = pd.read_csv(io.StringIO(content))
 st.markdown(
     """
     <div style="text-align: center;">
-        <img src="Logo_app.png" width="250">
+        <img src="Logo_app.png" width="100">
     </div>
     """,
     unsafe_allow_html=True
@@ -330,6 +330,7 @@ else:
      
 
      
+
 
 
 
