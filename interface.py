@@ -238,7 +238,7 @@ else:
                                       upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
                                       send_email(to_email=email, 
                                                 subject="Automatically generated summaries - LOCALLY",
-                                                html_content=email_confermation(nome, cognome, email, subject, terms, and_or, classification),
+                                                html_content=email_confermation(nome, cognome, email, subject, terms, classification),
                                                 smtp_server="smtp.gmail.com",  
                                                 smtp_port=465,
                                                 sender_email=os.getenv("SENDER_EMAIL"),
@@ -328,7 +328,7 @@ else:
                                  df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)    #Aggiungo la nuova riga
                                  send_email(to_email=email, 
                                                 subject="Automatically generated summaries - LOCALLY",
-                                                html_content=email_confermation(nome, cognome, email, subject, terms, and_or, classification),
+                                                html_content=email_confermation(nome, cognome, email, subject, terms, classification),
                                                 smtp_server="smtp.gmail.com",  
                                                 smtp_port=465,
                                                 sender_email=os.getenv("SENDER_EMAIL"),
@@ -343,6 +343,7 @@ else:
      
 
      
+
 
 
 
