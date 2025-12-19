@@ -81,10 +81,10 @@ cognome = st.text_input("Insert your surname *", key="surname")
 email = st.text_input("Insert your email *", key="email")
 st.write("Fields with * are obligatory")
 buttonr_clicked = st.button("Delete Email", key="buttonr")
-              if buttonr_clicked:
-                 if email != "":
-                    df = df[df['Email'] == email].reset_index(drop=True)
-                    st.write("Success")
+if buttonr_clicked:
+      if email != "":
+              df = df[df['Email'] == email].reset_index(drop=True)
+              st.write("Success")
 st.divider()
 
 
@@ -322,6 +322,7 @@ else:
      
 
      
+
 
 
 
