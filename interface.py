@@ -312,17 +312,18 @@ else:
                            upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
    
                            st.success("File successfully updated on S3.")
-         with col_reset: 
-              buttonr_clicked = st.button("Delete Email", key="buttonr")
-              if buttonr_clicked:
-                 email = st.text_input(label="Insert your email *")
-                 if email != ""
-                    df = df[df['Email'] == email].reset_index(drop=True)
-                    st.write("Success")
+       with col_reset: 
+                 buttonr_clicked = st.button("Delete Email", key="buttonr")
+                 if buttonr_clicked:
+                    email = st.text_input(label="Insert your email *")
+                    if email != ""
+                       df = df[df['Email'] == email].reset_index(drop=True)
+                       st.write("Success")
 
      
 
      
+
 
 
 
