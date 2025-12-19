@@ -81,7 +81,7 @@ nome = st.text_input("Insert your name *", key="name")
 cognome = st.text_input("Insert your surname *", key="surname")
 email = st.text_input("Insert your email *", key="email")
 
-col1, col2, col3 = st.columns([1, 1, 1])
+col1, col2= st.columns([1, 1])
 with col1:
    buttonr_clicked = st.button("Delete Email", key="buttonr")
 with col2:
@@ -327,6 +327,7 @@ else:
      
 
      
+
 
 
 
