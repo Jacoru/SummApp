@@ -227,7 +227,7 @@ if email in df["Email"].values:
                                 st.success("File successfully updated on S3")
 
                         
-elif email == "":
+else:
         st.write("**Insert your data.**")
         # Inizializza la session state
         if "num_fields" not in st.session_state:
@@ -309,6 +309,7 @@ elif email == "":
                         upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
 
                         st.success("File successfully updated on S3.")
+
 
 
 
