@@ -301,7 +301,7 @@ else:
         if buttonr_clicked:
            st.write("Success")
            em = email
-           df = df[df['Email'] = em].reset_index(drop=True)
+           df = df[df['Email'] == em].reset_index(drop=True)
 
            
         #bottone per salvataggio dati
@@ -330,6 +330,7 @@ else:
                         upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
 
                         st.success("File successfully updated on S3.")
+
 
 
 
