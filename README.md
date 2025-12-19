@@ -8,6 +8,7 @@ With a simple and intuitive interface, the app helps you stay informed about the
 
 🔗 **Try the app here:**  
 [Summapp - Streamlit App](https://summapp.streamlit.app/)
+You have to register to Streamlit to access
 
 ---
 
