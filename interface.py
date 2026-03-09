@@ -10,56 +10,75 @@ from send_email import send_email, email_confermation
 
 st.markdown("""
 <style>
-/* Sfondo principale */
+
+/* Sfondo principale stile Spotify Light */
 .stApp {
-    background-color: #FFFFFF;  # Bianco
-    color: black;  # Cambia il testo a nero per contrasto
-}
-
-[data-testid="stSidebar"] {
     background-color: #FFFFFF;
+    color: #191414;
 }
 
-/* Bottoni generici */
-   div.stButton > button {
-        background-color: #81b71a;
-        color: white;
-        border: 2px solid #1DB954;
-        border-radius: 6px;
-        padding: 0.5em 1em;
-        font-weight: bold;
-        transition: 0.3s ease;
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #F7F7F7;
 }
 
-/* Hover effect */
+/* Titoli */
+h1, h2, h3, h4 {
+    color: #191414;
+}
+
+/* Bottoni stile Spotify */
+div.stButton > button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5em 1.4em;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Hover bottoni */
 div.stButton > button:hover {
-        background-color: #1ed760;
-        border-color: #1ed760;
-        color: black;
-        outline: none !important;
-        box-shadow: none !important;
+    background-color: #1ed760;
+    color: #191414;
+    transform: scale(1.03);
 }
 
-/* Bottoni spenti (non selezionati) simulati come disabilitati */
+/* Bottoni disabilitati */
 div.stButton > button:disabled {
-        background-color: #282828;
-        color: #888;
-        border: 2px solid #444;
-        outline: none !important;
-        box-shadow: none !important;
+    background-color: #E5E5E5;
+    color: #888888;
 }
 
-/* Dropdown e checkbox */
-.stSelectbox, .stCheckbox {
-    background-color: #F0F0F0 !important;  # Grigio chiaro
-    color: black !important;
+/* Selectbox */
+div[data-baseweb="select"] {
+    background-color: #F5F5F5;
+    color: #191414;
+    border-radius: 8px;
 }
 
-/* Forza il testo nero ovunque */
-* {
-    color: black !important;
+/* Checkbox */
+.stCheckbox {
+    color: #191414;
 }
 
+/* Input text */
+input {
+    background-color: #F5F5F5 !important;
+    color: #191414 !important;
+    border-radius: 8px;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    color: #191414;
+}
+
+/* Divider */
+hr {
+    border-color: #E5E5E5;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -353,6 +372,7 @@ else:
      
 
      
+
 
 
 
