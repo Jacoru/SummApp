@@ -8,12 +8,7 @@ import ast
 from streamlit_extras.stylable_container import stylable_container
 from send_email import send_email, email_confermation
 
-"""
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #121212;
-}
-"""
+
 st.markdown("""
 <style>
 
@@ -335,6 +330,7 @@ else:
      
 
      
+
 
 
 
