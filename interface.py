@@ -12,7 +12,7 @@ st.markdown("""
 <style>
 /* Bottoni generici */
    div.stButton > button {
-        background-color: #1DB954;
+        background-color: white;
         color: white;
         border: 2px solid #1DB954;
         border-radius: 6px;
@@ -344,6 +344,7 @@ else:
      
 
      
+
 
 
 
