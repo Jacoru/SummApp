@@ -16,85 +16,6 @@ st.markdown("""
     background-color: #FFFFFF;
 }
 
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #F7F7F7;
-}
-
-/* Forza il testo scuro ovunque */
-html, body, p, span, label, div {
-    color: #191414 !important;
-}
-
-/* Titoli */
-h1, h2, h3, h4, h5, h6 {
-    color: #191414 !important;
-}
-
-/* Testo Streamlit */
-[data-testid="stMarkdownContainer"] {
-    color: #191414 !important;
-}
-
-/* Input text */
-input {
-    background-color: #F5F5F5 !important;
-    color: #191414 !important;
-    border-radius: 8px;
-}
-
-/* Selectbox */
-div[data-baseweb="select"] * {
-    color: #191414 !important;
-}
-
-/* Checkbox */
-.stCheckbox label {
-    color: #191414 !important;
-}
-
-/* Bottoni stile Spotify */
-div.stButton > button {
-    background-color: #1DB954;
-    color: white !important;
-    border: none;
-    border-radius: 25px;
-    padding: 0.5em 1.4em;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-/* Hover */
-div.stButton > button:hover {
-    background-color: #1ed760;
-    color: #191414 !important;
-    transform: scale(1.03);
-}
-
-/* Bottoni disabilitati */
-div.stButton > button:disabled {
-    background-color: #E5E5E5;
-    color: #888888 !important;
-}
-/* Pills non selezionate */
-button[data-baseweb="tag"] {
-    background-color: #EAEAEA !important;
-    color: #191414 !important;
-    border-radius: 20px !important;
-    border: none !important;
-}
-
-/* Pills selezionate */
-button[data-baseweb="tag"][aria-pressed="true"] {
-    background-color: #1DB954 !important;
-    color: white !important;
-}
-
-
-/* Divider */
-hr {
-    border-color: #191414;
-}
 
 </style>
 """, unsafe_allow_html=True)
@@ -388,6 +309,7 @@ else:
      
 
      
+
 
 
 
