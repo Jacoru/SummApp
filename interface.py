@@ -55,9 +55,9 @@ div.stButton > button:disabled {
     color: black !important;
 }
 
-html, body, [class*="css"] {
-    color: black;
-    background-color: #FFFFFF;
+/* Forza il testo nero ovunque */
+* {
+    color: black !important;
 }
 
 
@@ -353,6 +353,7 @@ else:
      
 
      
+
 
 
 
