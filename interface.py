@@ -13,9 +13,36 @@ st.markdown("""
 
 /* Sfondo principale */
 .stApp {
-    background-color: #FFFFFF;
+    background-color: #121212;
+    color: white;
 }
 
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #121212;
+}
+
+/* Bottoni */
+div.stButton > button {
+    background-color: #81b71a;
+    color: white;
+    border: 2px solid #1DB954;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+div.stButton > button:hover {
+    background-color: #1ed760;
+    border-color: #1ed760;
+    color: black;
+}
+
+/* Testo */
+html, body {
+    color: white;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -309,6 +336,7 @@ else:
      
 
      
+
 
 
 
