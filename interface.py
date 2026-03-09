@@ -18,9 +18,9 @@ st.markdown("""
 
 /* Bottoni */
 div.stButton > button {
-    background-color: #81b71a;
+    background-color: #a0522d;
     color: white;
-    border: 2px solid #1DB954;
+    border: 2px solid #8b4513;
     border-radius: 6px;
     padding: 0.5em 1em;
     font-weight: bold;
@@ -330,6 +330,7 @@ else:
      
 
      
+
 
 
 
