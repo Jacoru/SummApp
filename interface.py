@@ -12,13 +12,12 @@ st.markdown("""
 <style>
 /* Sfondo principale */
 .stApp {
-    background-color: #121212;
-    color: white;
+    background-color: #FFFFFF;  # Bianco
+    color: black;  # Cambia il testo a nero per contrasto
 }
 
-/* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #121212;
+    background-color: #FFFFFF;
 }
 
 /* Bottoni generici */
@@ -52,14 +51,13 @@ div.stButton > button:disabled {
 
 /* Dropdown e checkbox */
 .stSelectbox, .stCheckbox {
-        background-color: #282828 !important;
-        color: white !important;
+    background-color: #F0F0F0 !important;  # Grigio chiaro
+    color: black !important;
 }
 
-/* Testo generale */
 html, body, [class*="css"] {
-color: white;
-background-color: #121212;
+    color: black;
+    background-color: #FFFFFF;
 }
 
 
@@ -355,6 +353,7 @@ else:
      
 
      
+
 
 
 
