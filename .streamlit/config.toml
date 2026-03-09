@@ -16,18 +16,19 @@
 [theme]
 base = "light"
 
+baseFontSize=18
 
 # Primary accent color.
 primaryColor = "#1DB954"
 
-backgroundColor = "#121212"
+backgroundColor = "#f5f5dc"
 
-# Grigio scuro per i widget interattivi
-secondaryBackgroundColor = "#282828"
+# Beige scuro per i widget interattivi
+secondaryBackgroundColor = "#deb887"
 
 
-# Bianco per il testo, per massima leggibilità
-textColor = "#FFFFFF"
+# Nero per il testo, per massima leggibilità
+textColor = "#000000"
 
 # Font consigliato (opzionale, se vuoi personalizzare ulteriormente)
 font = "sans serif"
