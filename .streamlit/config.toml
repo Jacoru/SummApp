@@ -16,7 +16,7 @@
 [theme]
 base = "light"
 
-baseFontSize=36
+baseFontSize=25
 
 # Primary accent color.
 primaryColor = "#1DB954"
