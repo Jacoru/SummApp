@@ -10,9 +10,20 @@ from send_email import send_email, email_confermation
 
 st.markdown("""
 <style>
+/* Sfondo principale */
+.stApp {
+    background-color: #121212;
+    color: white;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #121212;
+}
+
 /* Bottoni generici */
    div.stButton > button {
-        background-color: white;
+        background-color: #81b71a;
         color: white;
         border: 2px solid #1DB954;
         border-radius: 6px;
@@ -344,6 +355,7 @@ else:
      
 
      
+
 
 
 
