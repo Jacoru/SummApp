@@ -76,10 +76,24 @@ div.stButton > button:disabled {
     background-color: #E5E5E5;
     color: #888888 !important;
 }
+/* Pills non selezionate */
+button[data-baseweb="tag"] {
+    background-color: #EAEAEA !important;
+    color: #191414 !important;
+    border-radius: 20px !important;
+    border: none !important;
+}
+
+/* Pills selezionate */
+button[data-baseweb="tag"][aria-pressed="true"] {
+    background-color: #1DB954 !important;
+    color: white !important;
+}
+
 
 /* Divider */
 hr {
-    border-color: #E5E5E5;
+    border-color: #191414;
 }
 
 </style>
@@ -374,6 +388,7 @@ else:
      
 
      
+
 
 
 
