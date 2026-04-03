@@ -174,6 +174,8 @@ else:
                       else:
                               subj=[]
                               for sub in subject:
+                                      print("sub =", sub)
+                                      print("keys =", diz_sub.keys())
                                       subj.append(diz_sub[sub])
                               subject = subj
       
