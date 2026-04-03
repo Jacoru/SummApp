@@ -167,15 +167,13 @@ else:
                       st.write(result)
       
                       diz_sub={"Computer Science (cs)": "computer_science", "Economics (ec)":"economics", "Electrical Engineering and Systems Science (eess)":"electrical_engineering_and_systems_science", "Mathematics (math)":"mathematics", "Physics":"physics", "Quantitative Biology (q-bio)":"quantitative_biology", "Quantitative Finance (q-fin)": "quantitative_finance", "Statistics (stat)":"statistics"}
-                      options = ["Computer Science (cs)", "Economics (econ)", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics (ph)", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
+                      options = ["Computer Science (cs)", "Economics (ec)", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics (ph)", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
                       subject = st.pills("Subject", options, selection_mode="multi")
                       if subject == []:
                               subject = saved_subjects
                       else:
                               subj=[]
                               for sub in subject:
-                                      print("sub =", sub)
-                                      print("keys =", diz_sub.keys())
                                       subj.append(diz_sub[sub])
                               subject = subj
       
@@ -276,7 +274,7 @@ else:
                               del terms[0:i]
       
               st.divider()
-              options = ["Computer Science (cs)", "Economics", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
+              options = ["Computer Science (cs)", "Economics (ec)", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
               subject = st.pills("Subject", options, selection_mode="multi")
       
               #sottocategoria Physics
