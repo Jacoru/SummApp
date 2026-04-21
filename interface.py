@@ -217,9 +217,18 @@ else:
       
                                       content = download_to_s3()
                                       df = pd.read_csv(io.StringIO(content))
+                                  
+                                      email = email.strip().lower()
+                                      df["Email"] = df["Email"].str.strip().str.lower()
                                       mask = df["Email"] == email
-                                      df = df.loc[mask, :] = new_row
-      
+                                      if mask.any():
+                                            # Sovrascrivi SOLO le colonne presenti in new_row
+                                            for col, val in new_row.items():
+                                            df.loc[mask, col] = val
+                                      else:
+                                            # Se non esiste, aggiungi una nuova riga
+                                            df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+                                      
                                       upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
                                       send_email(to_email=email, 
                                                 subject="Automatically generated summaries - LOCALLY",
