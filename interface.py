@@ -219,8 +219,8 @@ else:
                                       df = pd.read_csv(io.StringIO(content))
                                   
                                       email = email.strip().lower()
-                                      df["Email"] = df["Email"].str.strip().str.lower()
-                                      mask = df["Email"] == email
+                                      EMAIL = df["Email"].str.strip().str.lower()
+                                      mask = EMAIL == email
                                       if mask.any():
                                             # Sovrascrivi SOLO le colonne presenti in new_row
                                             for col, val in new_row.items():
