@@ -46,6 +46,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
+print(df)
 
  # Interfaccia Streamlit
 col1, col2, col3 = st.columns([1, 1, 1])
@@ -83,12 +84,14 @@ if buttonr_clicked:
 else:  
       st.divider()
       if email in df["Email"].values:
+              print(df["Email"])
+              print(email)
               on = st.toggle("Mail already registered. If you want to modify your data, activate this feature.")
               if on:
                       st.write("Start modifying your data.")
                       dati_utente = df[df["Email"] == email].iloc[0]
       
-                                              # Precompila i campi
+                      # Precompila i campi
                       saved_keywords = ast.literal_eval(dati_utente["Keywords"])
                       saved_ops = ast.literal_eval(dati_utente["Operator"])
                       saved_subjects = ast.literal_eval(dati_utente["Subject"])
@@ -214,13 +217,8 @@ else:
       
                                       content = download_to_s3()
                                       df = pd.read_csv(io.StringIO(content))
-                                      
-                                      df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)    #Aggiungo la nuova riga
-                                      index = df[df["Email"] == email].index
-      
-                                      #aggiorna solo i campi specificati
-                                      for col, val in new_row.items():
-                                                      df.loc[index, col] = str(val)
+                                      mask = df["Email"] == email
+                                      df = df.loc[mask, :] = new_row
       
                                       upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
                                       send_email(to_email=email, 
