@@ -203,14 +203,14 @@ else:
                               else:
                                       st.success(f"Wait for data's updating for: {email}")
                                       new_row = {
-                                      "Email": email,
-                                      "Name": nome,
-                                      "Surname": cognome,
-                                      "Keywords": terms, 
-                                      "Operator": and_or,
-                                      "Subject": subject,
-                                      "Classification": classification
-                                      }
+                                                "Email": str(email),
+                                                "Name": str(nome),
+                                                "Surname": str(cognome),
+                                                "Keywords": ", ".join(terms) if isinstance(terms, list) else str(terms),
+                                                "Operator": str(and_or),
+                                                "Subject": str(subject),
+                                                "Classification": str(classification)
+                                                }
       
                                       AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
                                       AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")      #scarica file direttamente da S3
