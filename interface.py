@@ -316,7 +316,7 @@ else:
                                                 html_content=email_confermation(nome, cognome, email, subject, terms, classification),
                                                 smtp_server="smtp.gmail.com",  
                                                 smtp_port=465,
-                                                sender_email = st.secrets["SENDER_EMAIL"]
+                                                sender_email = st.secrets["SENDER_EMAIL"],
                                                 sender_password = st.secrets["SENDER_PASSWORD"]
                                                 )
                                  upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
