@@ -220,11 +220,12 @@ else:
                                   
                                       email = email.strip().lower()
                                       EMAIL = df["Email"].str.strip().str.lower()
-                                      mask = EMAIL == email
-                                      if mask.any():
-                                            # Sovrascrivi SOLO le colonne presenti in new_row
-                                            for col, val in new_row.items():
-                                                df.loc[mask, col] = val
+                                  
+                                      filtered_df = df[df['Email'] == email]
+                                      if not filtered_df.empty:
+                                          idx = filtered_df.index
+                                          for col, val in switch_row.items():
+                                                df.loc[idx, col] = val
                                       else:
                                             # Se non esiste, aggiungi una nuova riga
                                             df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
