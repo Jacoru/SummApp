@@ -202,7 +202,7 @@ else:
                                       st.error("Plese, insert values in all fields with *") #obbligo di compilazione
                               else:
                                       st.success(f"Wait for data's updating for: {email}")
-                                      new_row = {
+                                      switch_row = {
                                                 "Email": str(email),
                                                 "Name": str(nome),
                                                 "Surname": str(cognome),
