@@ -246,7 +246,7 @@ else:
               st.write("**Insert your data.**")
               # Inizializza la session state
               if "num_fields" not in st.session_state:
-                      st.session_state.num_fields = 1
+                      st.session_state.num_fields = 0
               terms=[]
               and_or=[]
       
