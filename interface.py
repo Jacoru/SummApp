@@ -92,7 +92,7 @@ else:
                       dati_utente = df[df["Email"] == email].iloc[0]
       
                       # Precompila i campi
-                      print(type(dati_utente["Keywords"]))
+                      st.write(type(dati_utente["Keywords"]))
                       if type(dati_utente["Keywords"]) == "str":
                           saved_keywords = dati_utente["Keywords"]
                       else:
