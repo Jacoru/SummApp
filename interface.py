@@ -102,17 +102,19 @@ else:
       
       
                       result = "Your saved keyword(s) are: "
-      
-                      if len(saved_keywords) == 1:
-                              result += f" {saved_keywords[0]}.\n"
-                      else:
-                              for words in saved_keywords:
-                                      if words == saved_keywords[0]:
-                                              result += f" {words},\n"
-                                      elif words == saved_keywords[-1]:
-                                              result += f" {words}.\n"
-                                      else:
-                                              result += f" {words},\n"
+                      if isinstance(saved_keywords, str):
+                          result += f"{saved_keywords}.\n"
+                      elif isinstance(saved_keywords, list):
+                          elif len(saved_keywords) == 1:
+                                  result += f" {saved_keywords[0]}.\n"
+                          else:
+                                  for words in saved_keywords:
+                                          if words == saved_keywords[0]:
+                                                  result += f" {words},\n"
+                                          elif words == saved_keywords[-1]:
+                                                  result += f" {words}.\n"
+                                          else:
+                                                  result += f" {words},\n"
                       st.divider()
       
                       st.write(f"Your saved search is: {result}")
