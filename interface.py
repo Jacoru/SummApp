@@ -206,7 +206,7 @@ else:
                                                 "Email": str(email),
                                                 "Name": str(nome),
                                                 "Surname": str(cognome),
-                                                "Keywords": ", ".join(terms) if isinstance(terms, list) else str(terms),
+                                                "Keywords": terms,
                                                 "Operator": str(and_or),
                                                 "Subject": str(subject),
                                                 "Classification": str(classification)
