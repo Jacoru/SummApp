@@ -94,7 +94,7 @@ else:
                       # Precompila i campi
                       st.write(type(dati_utente["Keywords"]))
                       st.write(dati_utente["Keywords"])
-                      if isinstance(dati_utente["Keywords"], str)::
+                      if isinstance(dati_utente["Keywords"], str):
                           saved_keywords = dati_utente["Keywords"]
                       else:
                           saved_keywords = ast.literal_eval(dati_utente["Keywords"])
