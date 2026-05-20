@@ -92,7 +92,10 @@ else:
                       dati_utente = df[df["Email"] == email].iloc[0]
       
                       # Precompila i campi
-                      saved_keywords = ast.literal_eval(dati_utente["Keywords"])
+                      if type(dati_utente["Keywords"]) == "str":
+                          saved_keywords = dati_utente["Keywords"]
+                      else:
+                          saved_keywords = ast.literal_eval(dati_utente["Keywords"])
                       saved_ops = ast.literal_eval(dati_utente["Operator"])
                       saved_subjects = ast.literal_eval(dati_utente["Subject"])
                       saved_classification = dati_utente["Classification"]
