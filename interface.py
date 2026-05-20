@@ -93,6 +93,7 @@ else:
       
                       # Precompila i campi
                       st.write(type(dati_utente["Keywords"]))
+                      st.write(dati_utente["Keywords"])
                       if type(dati_utente["Keywords"]) == "str":
                           saved_keywords = dati_utente["Keywords"]
                       else:
